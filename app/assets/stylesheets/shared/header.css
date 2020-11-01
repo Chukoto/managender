@@ -1,5 +1,14 @@
-.lists-right {
+.top-header {
   display: flex;
-  list-style: none;
-  align-items: flex-end;
+}
+
+.lists-left {
+  background-color: blue;
+  display: flex;
+  width: 50%;
+}
+
+.lists-right {
+  background-color: red;
+  width: 50%;
 }
