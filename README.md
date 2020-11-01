@@ -30,8 +30,6 @@
 - belongs_to :user
 - has_many :comments
 
-# テーブル設計
-
 ## comments テーブル
 
 | Column       | Type       | Options                        |
