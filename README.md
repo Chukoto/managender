@@ -10,7 +10,7 @@
 | first_name         | string  | null: false |
 | last_name          | string  | null: false |
 | birthday           | date    | null: false |
-| gender_id          | integer | null: false |
+| gender             | integer | null: false |
 
 ### Association
 

@@ -36,7 +36,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="unset">
+生年月日
+  <div class="birthday">
           <%= raw sprintf(
                   f.date_select(
                     :birthday,
@@ -48,6 +49,14 @@
                     end_year: (Time.now.year - 5),
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+  </div>
+
+  <div class="gender-field">
+      <%= f.label :Woman %><br />
+      <%= f.label :yet  %>
+      <%= f.radio_button :gender, :man %>
+      <%= f.label :already  %>
+      <%= f.radio_button :gender, :woman %>
   </div>
 
   <div class="actions">
