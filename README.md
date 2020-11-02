@@ -21,7 +21,7 @@
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| category_id | string     | null: false                    |
+| category_id | integer    | null: false                    |
 | text        | string     | null: false                    |
 | user        | references | null: false, foreign_key: true |
 
