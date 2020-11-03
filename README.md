@@ -37,7 +37,7 @@
 | ------------ | ---------- | ------------------------------ |
 | comment_text | string     | null: false                    |
 | user         | references | null: false, foreign_key: true |
-| questions    | references | null: false, foreign_key: true |
+| question     | references | null: false, foreign_key: true |
 
 ### Association
 
