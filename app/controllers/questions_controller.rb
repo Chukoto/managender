@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update,]
   before_action :specified_question, only: [:show, :edit, :update]
+  before_action :specified_user, only: [:edit]
 
   def index
     @questions = Question.order('created_at DESC')
