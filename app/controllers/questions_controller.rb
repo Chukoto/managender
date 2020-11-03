@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @questions = Question
+    @questions = Question.all
   end
 
   def new
@@ -16,6 +16,10 @@ class QuestionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @question = Question.find(params[:id])
   end
 
   private
