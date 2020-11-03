@@ -43,4 +43,9 @@ class QuestionsController < ApplicationController
   def specified_question
     @question = Question.find(params[:id])
   end
+
+  def specified_user
+    redirect_to root_path unless @question.user.id == current_user.id
+  end
+      
 end
