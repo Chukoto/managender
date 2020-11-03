@@ -7,7 +7,7 @@
 
 <div class="question-main">
   <h2 class="question-title">悩める内容を教えてください</h2>
-  <%= form_with model: @question, url: questions_path, method: :post, local: true do |f| %>
+  <%= form_with model: @question, url: question_path, method: :patch, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -34,7 +34,7 @@
 
   <%# 送信ボタン %>
   <div class="question-submit-btn">
-    <%= f.submit "質問を完了する", class:"question-submit-btn" %>
+    <%= f.submit "質問内容を更新する", class:"question-submit-btn" %>
   </div>
 
   <% end %>
