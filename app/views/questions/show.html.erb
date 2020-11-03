@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+
+<div class="user-nickname">
+<%= "#{@question.user.nickname}さん" %>
+</div>
+
+<div class="question-title">
+<%= @question.title %>
+</div>
+
+<div class="question-category">
+<%= @question.category.name %>
+</div>
+
+<%= @question.text%>
