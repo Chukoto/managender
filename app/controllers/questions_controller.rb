@@ -41,12 +41,11 @@ class QuestionsController < ApplicationController
       render :show
     end
   end
-    
 
   private
-  
+
   def question_params
-    params.require(:question).permit(:category_id, :title, :text).merge(user_id: current_user.id)
+    params.require(:question).permit(:category_id, :title, :text, :image).merge(user_id: current_user.id)
   end
 
   def specified_question
@@ -56,5 +55,4 @@ class QuestionsController < ApplicationController
   def specified_user
     redirect_to root_path unless @question.user.id == current_user.id
   end
-      
 end
