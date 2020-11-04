@@ -9,5 +9,11 @@ class Question < ApplicationRecord
     validates :category_id, numericality: { other_than: 0 }
     validates :title
     validates :text
+    validates :content, presence: true, unless: :was_attached?
   end
+
+  def was_attached?
+    self.image.attached?
+  end
+
 end
