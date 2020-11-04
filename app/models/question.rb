@@ -3,10 +3,17 @@ class Question < ApplicationRecord
   belongs_to_active_hash :category
 
   belongs_to :user
+  has_one_attached :image
 
   with_options presence: true do
     validates :category_id, numericality: { other_than: 0 }
     validates :title
     validates :text
+    validates :content, presence: true, unless: :was_attached?
   end
+
+  def was_attached?
+    self.image.attached?
+  end
+
 end
