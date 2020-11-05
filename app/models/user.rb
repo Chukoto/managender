@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :questions
   has_many :comments
+  has_many :favorites
+  has_many :posts, through: :favorites
 
   enum gender: { yet: 0, already: 1 }
 
