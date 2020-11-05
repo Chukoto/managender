@@ -32,6 +32,12 @@
   </div>
   <%= f.text_area :text, class:"text-text", id:"text_id", placeholder:"質問内容" %>
 
+  <%# 画像添付 %>
+  <div class="image-field">
+    <%= f.label :image, "質問に関する画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
   <%# 送信ボタン %>
   <div class="question-submit-btn">
     <%= f.submit "質問内容を更新する", class:"question-submit-btn" %>
