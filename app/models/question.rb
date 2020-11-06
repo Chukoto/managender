@@ -4,6 +4,8 @@ class Question < ApplicationRecord
 
   belongs_to :user
   has_many :comments
+  has_many :favorites
+  has_many :users, through: :favorites
   has_one_attached :image
 
   with_options presence: true do

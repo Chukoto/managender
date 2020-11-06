@@ -43,3 +43,15 @@
 
 - belongs_to :user
 - belongs_to :question
+
+## favorites テーブル
+
+| Column       | Type    | Options     |
+| ------------ | ------- | ----------- |
+| user_id      | integer | null: false |
+| question_id  | integer | null: false |
+
+### Association
+
+- belongs_to :user
+- belongs_to :question

@@ -38,6 +38,14 @@
 <%= render 'shared/error_messages', model: @comment %>
 
 <% if user_signed_in? %>
+
+  <% if Favorite.find_by(user_id: current_user.id, question_id: @question.id) %>
+    <%=link_to("いいね[★]", "/favorites/#{@question.id}/destroy", {method: "post"})%>
+  <% else %>
+    <%= link_to("いいね[☆]", "/favorites/#{@question.id}/create", {method: "post"}) %>
+  <% end %>
+  <%= @favorites_count %>
+
   <%= form_with(model: [@question, @comment], local: true) do |form| %>
     <%= form.text_area :text, placeholder: "コメントする", rows: "5", cols: "59" %>
       <div>

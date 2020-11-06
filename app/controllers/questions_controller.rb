@@ -23,6 +23,7 @@ class QuestionsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @question.comments.includes(:user)
+    @favorites_count = Favorite.where(question_id: @question.id).count
   end
 
   def edit
