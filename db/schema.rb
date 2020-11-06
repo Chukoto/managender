@@ -42,12 +42,10 @@ ActiveRecord::Schema.define(version: 2020_11_05_101401) do
   end
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "question_id", null: false
+    t.integer "user", null: false
+    t.integer "question", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["question_id"], name: "index_favorites_on_question_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
