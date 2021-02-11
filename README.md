@@ -1,3 +1,7 @@
+*This is the base of my application named "wyvez"
+*This is a kind of test coding application.
+*wyvez URL is here github.com/Chukoto/wyvez
+
 # テーブル設計
 
 ## users テーブル
