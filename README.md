@@ -1,6 +1,6 @@
 *This is the base of my application named "wyvez"
-*This is a kind of test coding application.
-*wyvez URL is here github.com/Chukoto/wyvez
+<br>*This is a kind of test coding application.
+<br>*wyvez URL is here https://github.com/Chukoto/wyvez
 
 # テーブル設計
 
